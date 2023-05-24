@@ -4,21 +4,22 @@
 import sys
 import urllib.parse as urllib
 
+import xbmc
 import xbmcgui
 import xbmcplugin
 
 
 def get_params():
     param = []
-    paramstring = sys.argv[2]
-    if len(paramstring) >= 2:
-        params = sys.argv[2]
-        cleanedparams = params.replace('?','')
-        if params[len(params)-1] == '/':
-            params = params[0:len(params)-2]
+    param_string = sys.argv[2]
+    xbmc.log(f'metadata.common.filenamescraper args {param_string}')
+    if len(param_string) >= 2:
+        cleanedparams = param_string.replace('?','')
+        if param_string[len(param_string)-1] == '/':
+            param_string = param_string[0:len(param_string)-2]
         pairsofparams = cleanedparams.split('&')
         param = {}
-        for i in range(len(pairsofparams)):
+        for i in enumerate(pairsofparams):
             splitparams = {}
             splitparams = pairsofparams[i].split('=')
             if (len(splitparams)) == 2:
