@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="metadata.musicvideos.tafilenamescraper"
+       name="Title - Artist Filename Scraper"
+       version="0.0.2"
+       provider-name="chaosgrid/scott967">
+  <requires>
+    <import addon="xbmc.metadata" version="2.1.0"/>
+    <import addon="xbmc.python" version="3.0.1"/>
+  </requires>
+  <extension point="xbmc.metadata.scraper.musicvideos"
+             library="scrape_filename.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Filename-only Scraper</summary>
+    <description lang="en_GB">Scrapes the filename by parsing tite - artist.</description>
+    <platform>all</platform>
+		<license>GPL 2.0 or later</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=372995</forum>
+		<source>https://github.com/scott967/kodi-filenameScraper</source>
+		<email>scott967@kodi.tv</email>
+    <news>v 0.0.2 Initial release 2023-05-25</news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
