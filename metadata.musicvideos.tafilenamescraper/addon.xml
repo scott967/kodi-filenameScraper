@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="metadata.common.aafilenamescraper"
-       name="Artist - Album Filename Scraper"
-       version="0.0.1+matrix.1"
-       provider-name="chaosgrid">
+<addon id="metadata.musicvideos.tafilenamescraper"
+       name="Title - Artist Filename Scraper"
+       version="0.0.2"
+       provider-name="chaosgrid/scott967">
   <requires>
     <import addon="xbmc.metadata" version="2.1.0"/>
-    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="xbmc.python" version="3.0.1"/>
   </requires>
   <extension point="xbmc.metadata.scraper.musicvideos"
              library="scrape_filename.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Filename-only Scraper</summary>
-    <description lang="en">Scrapes the filename by removing file extension and replacing - and _ with spaces.</description>
+    <description lang="en">Scrapes the filename by parsing tite - artist.</description>
     <platform>all</platform>
   </extension>
 </addon>
